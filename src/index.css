@@ -9,4 +9,48 @@ body{
 
 :root,body,html{
     background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+div,h1,h2,h3,h4,h5,h6,header,html,i,img,label,li,nav,p,small,span,ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+.Nav{
+    margin-right: auto;
+    display: block;
+    @media (max-width:768px) {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+    }
+}
+
+.NavlistWrap{
+    .active{
+        span:after{
+            content: "";
+            transform: scaleX(1);
+            border-bottom: 2px solid var(--white,#fff);
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            transition: transform 0.2s ease-in-out;
+            width: 100%;
+            border-color:rgba(0, 0, 0, 0.9) ;
+
+        }
+    }
 }
